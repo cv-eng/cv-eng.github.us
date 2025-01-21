@@ -95,7 +95,11 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    position: absolute;
+    bottom: -40px; /* Align with buttons */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1; /* Ensure it's visible above other elements */
 }
 
 .dot {
@@ -119,9 +123,9 @@ body {
     justify-content: space-between;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -54px;
     padding: 0 20px;
-    left:0;
+    left: 0;
 }
 
 button {
@@ -176,5 +180,28 @@ button:focus {
     }
     button {
         min-width: 90px; /* Adjust button width on smaller screens */
+    }
+    /* .dot{
+        width: 5px;
+        height: 5px;
+    } */
+    .buttons{
+        bottom: -40px;
+    }
+    .dots-container{
+        bottom: -26px;
+        left: calc(50% + 4px);
+    }
+}
+
+@media (max-width: 440px) {
+    .dots-container{
+        bottom: -26px;
+        left: calc(50% + 4px);
+        gap: 5px
+    }
+    .dot{
+        width: 8px;
+        height: 8px;
     }
 }

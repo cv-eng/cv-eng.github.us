@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines Page</title>
+    <link rel="stylesheet" href="css/valentines-page-style.css">
+    <link rel="stylesheet" href="css/default-styles.css">
+    <link rel="stylesheet" href="css/header-styles.css">
+    <link rel="stylesheet" href="css/side-nav-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="videos/fireworks.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <header class="site-header">
+        <h1>Happy Valentines Day</h1>
+    </header>
+    <div class="content-wrapper">
+        <div class="blob" id="section-1">
+            <p class="blob-text">We met each other on August 6th, 2020 when you told me from Linus' chat:</p>
+            <img src="val-images/image.png" alt="A moment from our early days">
+        </div>
+        <div class="blob" id="section-2" style="display: none;">
+            <p class="blob-text">Then we spent forever talking to each other, getting to know each other better.</p>
+        </div>
+        <div class="blob" id="section-3" style="display: none;">
+            <p class="blob-text">Eventually we finally confessed our feelings but it wasn't the time for us.</p>
+        </div>
+        <div class="blob" id="section-4" style="display: none;">
+            <p class="blob-text">We spent so long away from each other, through I could never get you out of my mind.</p>
+        </div>
+        <div class="blob" id="section-5" style="display: none;">
+            <p class="blob-text">Eventually, we came back together and decided that we couldn't wait any longer and started dating.</p>
+        </div>
+        <div class="blob" id="section-6" style="display: none;">
+            <p class="blob-text">Looking back, we now know that what you said back then wasn't true.</p>
+        </div>
+        <div class="blob" id="section-7" style="display: none;">
+            <p class="blob-text">Through every laugh, every conversation, and even the awkward moments, we've learned so much about each other.</p>
+        </div>
+        <div class="blob" id="section-8" style="display: none;">
+            <p class="blob-text">From the small things to the big milestones, you've become such a special part of my life.</p>
+        </div>
+        <div class="blob" id="section-9" style="display: none;">
+            <p class="blob-text">And now, as we celebrate our one-year anniversary, I have one question for you: Will you be my Valentine?</p>
+        </div>
+        <div class="buttons">
+            <button id="prev-btn" onclick="showPreviousSection()">Previous</button>
+            <button id="next-btn" onclick="showNextSection()">Next</button>
+        </div>
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script src="js/side-nav.js"></script>
+    <script src="js/timelock.js"></script>
+    <script src="js/story.js"></script>
+</body>
+</html>

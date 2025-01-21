@@ -1,0 +1,25 @@
+.site-header {
+    color: #FF69B4;
+    width: 100%;
+    max-width: 1200px; /* Limit the max width for centering */
+    padding: 1em 2em;
+    background-color: var(--color-header-bg);
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centering the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    background-color: rgba(01,03,29, 0.5); /* Pink color with 50% opacity */
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 1em 2em 1em calc(2em + 15.75px);
+    }
+}

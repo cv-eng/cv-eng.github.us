@@ -1,0 +1,69 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1A233A; /* Deep color matching the theme */
+    overflow-x: hidden;
+    padding-top: 80px;
+    transition: 0.5s ease;
+    z-index: 502;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+.sidenav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff; /* White color for text to contrast well */
+    display: block;
+    transition: 0.3s ease;
+    border-left: 3px solid transparent;
+    background-image: linear-gradient(to right, #ad2be0, #712291); /* Soft gradient */
+    border-radius: 8px;
+    margin: 10px 15px; /* Spacing between links */
+}
+
+.sidenav a:hover {
+    background-image: linear-gradient(to right, #ff43b6, #c22887); /* Slightly brighter gradient */
+    border-left: 3px solid #ff43b6; /* Underline effect with border */
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    color: #ff43b6; /* Soft pink for close button */
+    margin-left: 50px;
+    cursor: pointer; /* Add cursor for better UX */
+}
+
+.side-nav-open {
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    color: #ff43b6; /* Open button matches the close button */
+    z-index: 501;
+    cursor: pointer;
+}
+
+.side-nav-open i {
+    font-size: 36px;
+}
+
+#main {
+    transition: margin-left .5s ease;
+    padding: 20px;
+}
+
+@media (max-height: 600px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

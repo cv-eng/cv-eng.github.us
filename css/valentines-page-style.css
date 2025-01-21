@@ -1,0 +1,180 @@
+:root {
+    --color-bg: #1A233A; /* Deep background color */
+    --color-glass: #2A2F45; /* Glass effect color */
+    --color-water: #104d4e; /* Water effect color */
+    --color-pink: #ff43b6;
+    --color-purple: #712291;
+}
+
+video {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0.3; /* Adjust opacity to make the video more transparent */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #00010d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+.flower-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00010d;
+    padding: 30px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.blob {
+    background-image: linear-gradient(to bottom, #ad2be0, #712291);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /*min-height: 150px; /* Ensures a minimum height for each section */
+}
+
+.blob-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f1f1f1;
+    margin: 0;
+}
+
+.blob img {
+    max-width: 100%; /* Ensures the image does not overflow */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Adds rounded corners to the image */
+    margin-top: 10px; /* Adds space between the image and text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow around the image */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ff43b6; /* Highlighted color for the active dot */
+}
+
+.dot:hover {
+    background-color: #ff43b6; /* Slight hover effect */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px;
+    left:0;
+}
+
+button {
+    background-color: #712291;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #ad2be0;
+    transform: scale(1.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+#prev-btn {
+    margin-right: auto; /* Align to the left */
+}
+
+#next-btn {
+    margin-left: auto; /* Align to the right */
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .content-wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .blob {
+        padding: 15px;
+    }
+
+    .blob-text {
+        font-size: 16px;
+    }
+    .blob img {
+        max-width: 90%; /* Reduces image size a bit on small screens */
+    }
+    button {
+        min-width: 90px; /* Adjust button width on smaller screens */
+    }
+}

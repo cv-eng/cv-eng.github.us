@@ -4,7 +4,7 @@ function openNav() {
   if (width < 600) {
     sideNavWidth = 250;
   }
-  document.getElementById("mySidenav").style.width = sideNavWidth + "px"; // Set the width dynamically
+  document.getElementById("mySidenav").style.width = sideNavWidth + "px";
 }
 
 function closeNav() {
@@ -18,13 +18,9 @@ function loadNav() {
           document.body.insertAdjacentHTML('afterbegin', data);
       })
       .then(() => {
-          // Re-attach event listeners if needed
           document.querySelector('.side-nav-open').addEventListener('click', openNav);
           document.querySelector('.closebtn').addEventListener('click', closeNav);
       });
 }
 
-// Your existing openNav and closeNav functions here
-
-// Load the navigation when the DOM is ready
 document.addEventListener('DOMContentLoaded', loadNav);

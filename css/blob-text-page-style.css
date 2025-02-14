@@ -1,35 +1,14 @@
-:root {
-    --color-bg: #1A233A; /* Deep background color */
-    --color-glass: #2A2F45; /* Glass effect color */
-    --color-water: #104d4e; /* Water effect color */
-    --color-pink: #ff43b6;
-    --color-purple: #712291;
-}
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #00010d;
+    background-image: var(--color-bg);
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start;
+    overflow: auto;
     color: #fff;
-}
-
-.flower-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00010d;
-    padding: 30px;
 }
 
 .content-wrapper {
@@ -37,7 +16,10 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 80%;
+    padding: 20px;
     max-width: 800px;
+    overflow: hidden;
+    margin-top: 80px;
 }
 
 .blob {

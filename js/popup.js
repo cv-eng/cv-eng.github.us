@@ -1,15 +1,13 @@
 function openImagePopup(imageUrl) {
     const popup = document.getElementById('image-popup');
     const popupImage = document.getElementById('popup-image');
-    const rawImageUrl = imageUrl + '?raw=true';  // Ensure raw=true is appended
+    const rawImageUrl = imageUrl + '?raw=true';
     popupImage.src = rawImageUrl;
-    popup.style.display = 'block';  // Make the popup visible
+    popup.style.display = 'block';
 }
 
-// Close popup when clicking on the close button
 document.querySelector('.close-button').addEventListener('click', closePopup);
 
-// Close popup when clicking outside the image (on the overlay background)
 document.getElementById('popup-image').addEventListener('click', (e) => {
         closePopup();
 });
